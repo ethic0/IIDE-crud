@@ -41,6 +41,6 @@ export class MainComponent implements OnInit {
       gameArray.push(this.gameList);
       localStorage.setItem('gameList', JSON.stringify(gameArray));
     }
-    // this.router.navigateByUrl('/showData');
+    this.router.navigateByUrl('/showData');
   }
 }

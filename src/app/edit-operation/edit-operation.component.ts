@@ -8,7 +8,7 @@ import { game } from '../interface/game';
 })
 export class EditOperationComponent implements OnInit {
   gameList: game;
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router:Router) {
     this.gameList = new game();
     this.route.queryParams.subscribe((response)=>{
       this.gameList.index = response['index'];
@@ -52,6 +52,6 @@ export class EditOperationComponent implements OnInit {
       gameArray.push(this.gameList);
       localStorage.setItem('gameList', JSON.stringify(gameArray));
     }
-    // this.router.navigateByUrl('/showData');
+    this.router.navigateByUrl('/showData');
   }
 }
