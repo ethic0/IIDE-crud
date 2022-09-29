@@ -1,0 +1,22 @@
+<div class="container">        
+    <table class="table table-striped">
+    <tr>
+    <th>Index</th>
+    <th>Game Title</th>
+    <th>Platform</th>
+    <th>Genre</th>
+    </tr>
+        <tr *ngFor="let game of gameList; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{game.title}}</td>
+            <td>{{game.platform}}</td>
+            <td>{{game.genre}}</td>
+            <td>
+            <button class="btn btn-outline-primary" [routerLink]="['/updateData', game.index]">Edit</button>
+            <button class="btn btn-outline-danger" (click)="deleteData(game.index)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+

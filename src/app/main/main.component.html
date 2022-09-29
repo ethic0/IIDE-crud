@@ -1,0 +1,31 @@
+  <div class="container">
+    <div class="container-items">
+        <form>
+            <div class="form-group">
+                <label for="title">Game title:</label>
+                <input class="form-control" type="text" [(ngModel)]="gameList.title" name="title" id="" placeholder="Game Title" required="true" autocomplete="off">
+                
+            </div>
+           <div class="form-group">
+            <label for="platform">Platform:</label>
+            <select class="form-control" [(ngModel)]="gameList.platform" name="platform" id="">
+                <select>----Select----</select>
+                <option value="PC">PC</option>
+                <option value="x-box">X-Box</option>
+                <option value="playstation">PlayStation</option>
+            </select>
+           </div>
+            <div class="form-group">
+            <label for="genre">Genre</label>
+            <input class="form-control" type="text" [(ngModel)]="gameList.genre" name="genre" id="" placeholder="Genre">
+            
+            </div>
+            <div class="form-group">
+            <div class="submit-section">
+                <button class="btn btn-outline-success" (click)="saveGame()">Add</button>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- <app-operations></app-operations> -->
